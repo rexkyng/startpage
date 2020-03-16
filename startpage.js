@@ -74,7 +74,7 @@ var sites = {
 			}
 		};
 
-var search = "http://www.duckduckgoog.com/";		// The search engine
+var search = "https://www.duckduckgoog.com/";		// The search engine
 var query  = "q";							// The query variable name for the search engine
 
 var pivotmatch = 0;
