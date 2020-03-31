@@ -1,11 +1,11 @@
 :root {
-	--hdr: #dadad9;		/* Header Background Color */
-	--bkg: #000000;		/* Background Color - Also located inside index.html <style> hard-coded */
-	--frg: #141c21;		/* Foreground Color */
-	--hgl: #FEED02;		/* Highlight Color */
+	--hdr: #FCFCFA;		/* Header Background Color */
+	--bkg: #403E41;		/* Background Color - Also located inside index.html <style> hard-coded */
+	--frg: #727072;		/* Foreground Color */
+	--hgl: #FFD866;		/* Highlight Color */
 
-	--htx: #000000;		/* Header Text Color */
-	--txt: #dadad9;		/* Text Color */
+	--htx: #403E41;		/* Header Text Color */
+	--txt: #FCFCFA;		/* Text Color */
 }
 
 html, body {
