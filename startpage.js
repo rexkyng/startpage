@@ -61,7 +61,7 @@ var sites = {
 			},
 			"☶  ssh":	{
 				"desktop"			: "ssh://",
-				"server-0"			: "ssh://rexky@rexky.ddns.net"
+				"server-0"			: "ssh://server-0.ddns.net"
 				
 			},
 			"☷  work": 	{
