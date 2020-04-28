@@ -57,7 +57,7 @@ var sites = {
 				"LIHKG"				: "https://lihkg.com/thread/1911051/",
 				"Twitter"			: "https://twitter.com/",
 				"WhatsApp"			: "https://web.whatsapp.com/",
-				"zFrontier"			: "https://www.zfrontier.com/"
+				"zFrontier"			: "https://www.zfrontier.com/app/entry"
 			},
 			"☶  ssh":	{
 				"desktop"			: "ssh://",
