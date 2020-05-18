@@ -48,7 +48,7 @@ var sites = {
 				"frontpage"			: "https://www.reddit.com",
 				"AyyMD"				: "https://www.reddit.com/r/AyyMD/",
 				"FirefoxCSS"		: "https://www.reddit.com/r/FirefoxCSS/",
-				"mk ⌨️"				: "https://www.reddit.com/r/MechanicalKeyboards/",
+				"mk ⌨"				: "https://www.reddit.com/r/MechanicalKeyboards/",
 				"unixporn"			: "https://www.reddit.com/r/unixporn/"
 			},
 			"☵  social": {
@@ -75,7 +75,7 @@ var sites = {
 		};
 
 var search = "https://www.duckduckgoog.com/";		// The search engine
-var query  = "q";							// The query variable name for the search engine
+var query  = "q";									// The query variable name for the search engine
 
 var pivotmatch = 0;
 var totallinks = 0;
