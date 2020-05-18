@@ -69,7 +69,7 @@ var sites = {
 				"Classroom"			: "https://classroom.google.com/",
 				"Drive"				: "https://drive.google.com/drive/",
 				"Keep"				: "https://keep.google.com/",
-				"Nextcloud"			: "https://emma.cloud.tabdigital.eu/",
+				"Office 365"		: "https://www.office.com/",
 				"OLE"				: "https://ole.ouhk.edu.hk/"
 			}
 		};
