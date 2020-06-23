@@ -54,7 +54,7 @@ var sites = {
 			"☵  social": {
 				"Discord"			: "https://discordapp.com/app",
 				"Facebook"			: "https://www.facebook.com/",
-				"LIHKG"				: "https://lihkg.com/thread/2052246/",
+				"LIHKG"				: "https://lihkg.com/thread/2074532/",
 				"Twitter"			: "https://twitter.com/",
 				"WhatsApp"			: "https://web.whatsapp.com/",
 				"zFrontier"			: "https://www.zfrontier.com/app/entry"
