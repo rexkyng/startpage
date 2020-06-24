@@ -7,6 +7,7 @@
     --magenta: #AB9DF2;
     --cyan: #78DCE8;
     --orange: #FC9867;
+    --white: #FCFCFA
 }
 
 body, body * {
@@ -14,7 +15,7 @@ body, body * {
     box-sizing: unset;
     padding: unset;
     font-size: 12px;
-    color: #FCFCFA;
+    color: var(--white);
     text-decoration: unset;
 }
 
@@ -114,24 +115,6 @@ background-color: var(--base03);
     width: 100%;
 }
 
-/* hyperlinks */
-
-a:link,
-a:visited {
-    color: var(--base0);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--cyan);
-    text-decoration: none;
-}
-
-a:active {
-    color: var(--blue);
-    text-decoration: none;
-}
-
 /* "syntax highlighting" */
 
 .user {
@@ -171,4 +154,30 @@ a:active {
 #h {
     text-align: left;
     color: var(--orange);
+}
+
+/* blocks */
+#c0 {
+    color: var(--black);
+}
+#c1 {
+    color: var(--red);
+}
+#c2 {
+    color: var(--green);
+}
+#c3 {
+    color: var(--blue);
+}
+#c4 {
+    color: var(--orange);
+}
+#c5 {
+    color: var(--magenta);
+}
+#c6 {
+    color: var(--cyan);
+}
+#c7 {
+    color: var(--white);
 }
