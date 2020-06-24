@@ -101,7 +101,7 @@ background-color: var(--base03);
 }
 
 #search-bar {
-    height: 15px;
+    height: 20px;
     width: 100%;
     order: 4;
     overflow: hidden;
