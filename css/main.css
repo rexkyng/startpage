@@ -49,6 +49,7 @@ body {
     font-family: "Hack JBM Ligatured";
     color: var(--base0);
     font-size: 12px;
+    zoom: 150%;
 }
 
 td {
@@ -89,7 +90,7 @@ background-color: var(--base03);
 #inner {
     margin-left: auto;
     margin-right: auto;
-    width: 650px;
+    width: 800px;
 }
 
 
