@@ -1,6 +1,6 @@
 :root {
-    --base03: #2D2A2E;
-    --black: #403E41;
+    --black: #2D2A2E;
+    --base03: #403E41;
     --red: #FF6188;
     --green: #A9DC76;
     --blue: #FFD866;
@@ -157,8 +157,16 @@ background-color: var(--base03);
 }
 
 /* blocks */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
 #c0 {
-    color: var(--black);
+    color: var(--base03);
 }
 #c1 {
     color: var(--red);
