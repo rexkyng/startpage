@@ -114,11 +114,6 @@ background-color: var(--base03);
     width: 100%;
 }
 
-::placeholder {
-    color: var(--base0);
-    opacity: 0.5;
-}
-
 /* hyperlinks */
 
 a:link,
