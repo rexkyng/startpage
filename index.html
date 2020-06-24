@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="main.js" defer></script>
+        <title>&lambda;</title>
+        <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    </head>
+    <body>
+        <div id="outer">
+            <div id="middle">
+                <div class="terminal-screen" id="inner">
+                  <div class="user">
+                    <a class="unix-user">&lambda;</a>
+                    <a class="unix-syntax2">&nbsp;➜</a>
+                    <a class="unix-syntax3">&nbsp; date &nbsp;</a>
+                  </div>
+                  <span id="clock">
+                    <!-- dome.js: displayDate() fills this element -->
+                  </span>
+                  <div class="user">
+                      <a class="unix-user">&lambda;</a>
+                      <a class="unix-syntax2">&nbsp;➜</a>
+                      <a class="unix-syntax3">&nbsp; ls &nbsp;</a>
+                  </div>
+                  <div class="main">
+                    <table>
+                      <tr>
+                        <th id="h">apps</th>
+                        <td><a href="app://thunar">thunar</a></td>
+                        <td><a href="app://kitty ytop">ytop</a></td>
+                        <td><a href="app://env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U">Spotify</a></td>
+                        <td><a href="app://code">VSCode</a></td>
+                      </tr>
+                      <tr>
+                        <th id="h" >games</th>
+                        <td><a href="lutris:rungame/heroes-of-the-storm">HoTS</a></td>
+                        <td><a href="lutris:rungame/overwatch">Overwatch</a></td>
+                        <td><a href="lutris:rungame/steam">Steam</a></td>
+                      </tr>
+                      <tr>
+                        <th id="h" >reddit</th>
+                        <td><a href="https://www.reddit.com/">frontpage</a></td>
+                        <td><a href="https://www.reddit.com/r/AyyMD/">AyyMD</a></td>
+                        <td><a href="https://www.reddit.com/r/FirefoxCSS/">FirefoxCSS</a></td>
+                        <td><a href="https://www.reddit.com/r/MechanicalKeyboards/">mk ⌨</a></td>
+                        <td><a href="https://www.reddit.com/r/startpages/">startpages</a></td>
+                        <td><a href="https://www.reddit.com/r/unixporn/">unixporn</a></td>
+                      </tr>
+                      <tr>
+                        <th id="h" >social</th>
+                        <td><a href="https://discordapp.com/app">Discord</a></td>
+                        <td><a href="https://www.facebook.com/">Facebook</a></td>
+                        <td><a href="https://lihkg.com/thread/2074532/">LIHKG</a></td>
+                        <td><a href="https://twitter.com/">Twitter</a></td>
+                        <td><a href="https://web.whatsapp.com/">WhatsApp</a></td>
+                        <td><a href="https://www.zfrontier.com/app/entry">zFrontier</a></td>
+                      </tr>
+                      <tr>
+                        <th id="h">work</th>
+                        <td><a href="https://calendar.google.com/calendar/">Calendar</a></td>
+                        <td><a href="https://classroom.google.com/">Classroom</a></td>
+                        <td><a href="https://drive.google.com/drive/">Drive</a></td>
+                        <td><a href="https://keep.google.com/">Keep</a></td>
+                        <td><a href="https://www.office.com/">Office365</a></td>
+                        <td><a href="https://ole.ouhk.edu.hk/">OLE</a></td>
+                      </tr>     
+                      <tr>
+                        <th id="h">ssh</th>
+                        <td><a href="ssh://0.0.0.0">desktop</a></td>
+                        <td><a href="ssh://server-0.ddns.net">server-0</a></td>
+                      </tr>  
+                    </table>
+                  </div>
+                  <br>
+                  <div id="search">
+                    <a class="unix-user">&lambda;</a>
+                    <a class="unix-syntax2">&nbsp;➜ &nbsp;</a>
+                    <form id="search-bar" method="get" action="http://www.duckduckgoog.com/" autocomplete="off">
+                      <input type="text" id="textfield" name="q" placeholder="█" autofocus />
+                    </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
