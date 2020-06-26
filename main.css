@@ -115,12 +115,12 @@ background-color: var(--base03);
     width: 100%;
 }
 
-a:hover {
+td > a:hover {
     color: var(--cyan);
     text-decoration: none;
 }
 
-a:active {
+td > a:active {
     color: var(--blue);
     text-decoration: none;
 }
