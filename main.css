@@ -102,7 +102,7 @@ background-color: var(--base03);
 }
 
 #search-bar {
-    height: 16px;
+    height: 20px;
     width: 100%;
     order: 4;
     overflow: hidden;
@@ -113,6 +113,7 @@ background-color: var(--base03);
 
 #textfield {
     width: 100%;
+    padding-top: 5px;
 }
 
 /* "syntax highlighting" */
