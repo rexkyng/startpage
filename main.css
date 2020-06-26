@@ -47,7 +47,7 @@ body, body * {
 /* elements */
 body {
     background-color: var(--black);
-    font-family: "Hack JBM Ligatured";
+    font-family: "Hack JBM Ligatured CCG";
     color: var(--base0);
     font-size: 12px;
     zoom: 150%;
@@ -63,7 +63,7 @@ input {
     outline: none;
     border: none;
     color: var(--base0);
-    font-family: "Hack JBM Ligatured";
+    font-family: "Hack JBM Ligatured CCG";
     font-size: 12px;
     padding-left: 5px;
 }
@@ -107,7 +107,7 @@ background-color: var(--base03);
     order: 4;
     overflow: hidden;
     background: var(--black);
-    font-family: "Hack JBM Ligatured";
+    font-family: "Hack JBM Ligatured CCG";
     display: flex;
 }
 
