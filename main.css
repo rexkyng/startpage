@@ -115,6 +115,16 @@ background-color: var(--base03);
     width: 100%;
 }
 
+a:hover {
+    color: var(--cyan);
+    text-decoration: none;
+}
+
+a:active {
+    color: var(--blue);
+    text-decoration: none;
+}
+
 /* "syntax highlighting" */
 
 .user {
