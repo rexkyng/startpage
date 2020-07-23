@@ -1,13 +1,16 @@
+/* change rexky to your user name to use wal colors*/
+@import url('file:///home/rexky/.cache/wal/colors.css');
+
 :root {
-    --black:    #2D2A2E;
-    --base03:   #403E41;
-    --red:      #FF6188;
-    --green:    #A9DC76;
-    --blue:     #FFD866;
-    --magenta:  #AB9DF2;
-    --cyan:     #78DCE8;
-    --orange:   #FC9867;
-    --white:    #FCFCFA
+    --black:    var(--color0);
+    --base03:   var(--background);
+    --red:      var(--color1);
+    --green:    var(--color2);
+    --blue:     var(--color3);
+    --magenta:  var(--color4);
+    --cyan:     var(--color5);
+    --orange:   var(--color6);
+    --white:    var(--foreground)
 }
 
 body, body * {
