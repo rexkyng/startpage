@@ -1,6 +1,3 @@
-/* change rexky to your user name to use wal colors*/
-@import url('file:///home/rexky/.cache/wal/colors.css');
-
 :root {
     --black:    var(--color0);
     --base03:   var(--background);
