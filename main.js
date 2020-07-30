@@ -97,7 +97,9 @@ function change_favicon(img) {
   favicon.setAttribute("href", img);
 }
 
-window.location.replace("app://xdotool key ctrl+a");
-change_favicon("favicon-32x32.png");
+if (true) { //edit true to disable it
+  window.location.replace("app://xdotool key ctrl+a");
+  change_favicon("favicon-32x32.png");
+}
 displayDate();
 setInterval(displayDate, 1000);
