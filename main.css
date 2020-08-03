@@ -116,12 +116,12 @@ background-color: var(--base03);
 }
 
 td > a:hover {
-    color: var(--yellow);
+    color: var(--cyan);
     text-decoration: none;
 }
 
 td > a:active {
-    color: var(--magenta);
+    color: var(--yellow);
     text-decoration: none;
 }
 
