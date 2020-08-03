@@ -3,10 +3,10 @@
     --base03:   var(--background);
     --red:      var(--color1);
     --green:    var(--color2);
-    --blue:     var(--color3);
-    --magenta:  var(--color4);
-    --cyan:     var(--color5);
-    --orange:   var(--color6);
+    --yellow:   var(--color3);
+    --blue:     var(--color4);
+    --magenta:  var(--color5);
+    --cyan:     var(--color6);
     --white:    var(--foreground)
 }
 
@@ -116,12 +116,12 @@ background-color: var(--base03);
 }
 
 td > a:hover {
-    color: var(--cyan);
+    color: var(--yellow);
     text-decoration: none;
 }
 
 td > a:active {
-    color: var(--blue);
+    color: var(--magenta);
     text-decoration: none;
 }
 
@@ -133,7 +133,7 @@ td > a:active {
 }
 
 .unix-user {
-    color: var(--magenta);
+    color: var(--cyan);
     order: 0;
 }
 
@@ -163,7 +163,7 @@ td > a:active {
 /* section headings */
 #h {
     text-align: left;
-    color: var(--orange);
+    color: var(--blue);
 }
 
 /* blocks */
@@ -185,10 +185,10 @@ td > a:active {
     color: var(--green);
 }
 #c3 {
-    color: var(--blue);
+    color: var(--yellow);
 }
 #c4 {
-    color: var(--orange);
+    color: var(--blue);
 }
 #c5 {
     color: var(--magenta);
