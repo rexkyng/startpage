@@ -1,201 +1,197 @@
 :root {
-    --black:    var(--color0);
-    --base03:   var(--background);
-    --red:      var(--color1);
-    --green:    var(--color2);
-    --yellow:   var(--color3);
-    --blue:     var(--color4);
-    --magenta:  var(--color5);
-    --cyan:     var(--color6);
-    --white:    var(--foreground)
+  --black: var(--color0);
+  --base03: var(--background);
+  --red: var(--color1);
+  --green: var(--color2);
+  --yellow: var(--color3);
+  --blue: var(--color4);
+  --magenta: var(--color5);
+  --cyan: var(--color6);
+  --white: var(--foreground);
 }
 
-body, body * {
-    margin: unset;
-    box-sizing: unset;
-    padding: unset;
-    font-size: 12px;
-    color: var(--white);
-    text-decoration: unset;
+body,
+body * {
+  margin: unset;
+  box-sizing: unset;
+  padding: unset;
+  font-size: 18px;
+  color: var(--white);
+  text-decoration: unset;
 }
-
 
 @media (max-width: 500px) {
-    .terminal-screen{
-        border: none !important;
-    }
-    #search {
-        order: 1 !important;
-    }
+  .terminal-screen {
+    border: none !important;
+  }
+  #search {
+    order: 1 !important;
+  }
 
-    #middle {
-        vertical-align: none !important;
-    }
+  #middle {
+    vertical-align: none !important;
+  }
 
-    #inner {
-        margin-left: 0  !important;
-        margin-right: 0  !important;
-    }
+  #inner {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 
-    .user {
-        order: 0 !important;
-    }
-
-
+  .user {
+    order: 0 !important;
+  }
 }
 
 /* elements */
 body {
-    background-color: var(--black);
-    font-family: "Hack JBM Ligatured CCG";
-    color: var(--base0);
-    font-size: 12px;
-    zoom: 150%;
+  background-color: var(--black);
+  font-family: "Hack JBM Ligatured CCG";
+  color: var(--base0);
+  font-size: 18px;
 }
 
 td {
-    padding-left: 12px;
+  padding-left: 18px;
 }
 
 input {
-    background-color: var(--base03);
-    caret-color: var(--base0);
-    outline: none;
-    border: none;
-    color: var(--base0);
-    font-family: "Hack JBM Ligatured CCG";
-    font-size: 12px;
-    padding-left: 5px;
+  background-color: var(--base03);
+  caret-color: var(--base0);
+  outline: none;
+  border: none;
+  color: var(--base0);
+  font-family: "Hack JBM Ligatured CCG";
+  font-size: 18px;
+  padding-left: 5px;
 }
 
 .terminal-screen {
-background-color: var(--base03);
-    overflow: hidden;
-    border: 0px solid var(--base03);
-    padding: 20px;
-    border-radius: 5px; 
+  background-color: var(--base03);
+  overflow: hidden;
+  border: 0px solid var(--base03);
+  padding: 20px;
+  border-radius: 5px;
 }
 
 #outer {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 #middle {
-    display: table-cell;
-    vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 #inner {
-    margin-left: auto;
-    margin-right: auto;
-    width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
 }
 
-
 #search {
-    display: flex;
-    width: 100%;
-    order: 2;
+  display: flex;
+  width: 100%;
+  order: 2;
 }
 
 #search-bar {
-    height: 20px;
-    width: 100%;
-    order: 4;
-    overflow: hidden;
-    background: var(--black);
-    font-family: "Hack JBM Ligatured CCG";
-    display: flex;
+  height: 20px;
+  width: 100%;
+  order: 4;
+  overflow: hidden;
+  background: var(--black);
+  font-family: "Hack JBM Ligatured CCG";
+  display: flex;
 }
 
 #textfield {
-    width: 100%;
+  width: 100%;
 }
 
 td > a:hover {
-    color: var(--cyan);
-    text-decoration: none;
+  color: var(--cyan);
+  text-decoration: none;
 }
 
 td > a:active {
-    color: var(--yellow);
-    text-decoration: none;
+  color: var(--yellow);
+  text-decoration: none;
 }
 
 /* "syntax highlighting" */
 
 .user {
-    display: flex;
-    order: 0;
+  display: flex;
+  order: 0;
 }
 
 .unix-user {
-    color: var(--cyan);
-    order: 0;
+  color: var(--cyan);
+  order: 0;
 }
 
 .unix-syntax2 {
-    color: var(--base0);
-    order: 3;
+  color: var(--base0);
+  order: 3;
 }
 
 .unix-syntax3 {
-    color: var(--green);
-    order: 4;
+  color: var(--green);
+  order: 4;
 }
 /* blinking cursor */
 
 .cursor {
-    animation: blinker 1s step-start infinite;
-    color: var(--base0);
-    order: 4;
+  animation: blinker 1s step-start infinite;
+  color: var(--base0);
+  order: 4;
 }
 
 @keyframes blinker {
-    50% {
-        opacity: 0;
-    }
+  50% {
+    opacity: 0;
+  }
 }
 
 /* section headings */
 #h {
-    text-align: left;
-    color: var(--blue);
+  text-align: left;
+  color: var(--blue);
 }
 
 /* blocks */
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 #c0 {
-    color: var(--base03);
+  color: var(--base03);
 }
 #c1 {
-    color: var(--red);
+  color: var(--red);
 }
 #c2 {
-    color: var(--green);
+  color: var(--green);
 }
 #c3 {
-    color: var(--yellow);
+  color: var(--yellow);
 }
 #c4 {
-    color: var(--blue);
+  color: var(--blue);
 }
 #c5 {
-    color: var(--magenta);
+  color: var(--magenta);
 }
 #c6 {
-    color: var(--cyan);
+  color: var(--cyan);
 }
 #c7 {
-    color: var(--white);
+  color: var(--white);
 }
