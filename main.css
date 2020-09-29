@@ -1,6 +1,6 @@
 :root {
-  --black: var(--color0);
-  --base03: var(--background);
+  --black: var(--background);
+  --base03: var(--color0);
   --red: var(--color1);
   --green: var(--color2);
   --yellow: var(--color3);
