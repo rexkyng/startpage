@@ -1,6 +1,6 @@
 :root {
-  --black: var(--background);
-  --base03: var(--color0);
+  --black: var(--color0);
+  --base03: var(--background);
   --red: var(--color1);
   --green: var(--color2);
   --yellow: var(--color3);
@@ -27,16 +27,6 @@ body * {
   #search {
     order: 1 !important;
   }
-
-  #middle {
-    vertical-align: none !important;
-  }
-
-  #inner {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-
   .user {
     order: 0 !important;
   }
@@ -44,10 +34,11 @@ body * {
 
 /* elements */
 body {
-  background-color: var(--black);
+  background-color: var(--base03);
   font-family: "Hack JBM Ligatured CCG";
   color: var(--base0);
   font-size: 18px;
+  padding: 20px;
 }
 
 td {
@@ -63,32 +54,6 @@ input {
   font-family: "Hack JBM Ligatured CCG";
   font-size: 18px;
   padding-left: 5px;
-}
-
-.terminal-screen {
-  background-color: var(--base03);
-  overflow: hidden;
-  border: 0px solid var(--base03);
-  padding: 20px;
-  border-radius: 5px;
-}
-
-#outer {
-  display: table;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
-#middle {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-#inner {
-  margin-left: auto;
-  margin-right: auto;
-  width: 800px;
 }
 
 #search {
