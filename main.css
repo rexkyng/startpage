@@ -36,7 +36,7 @@ body * {
 body {
   background-color: var(--base03);
   font-family: "Hack JBM Ligatured CCG";
-  color: var(--base0);
+  color: var(--white);
   font-size: 18px;
   padding: 20px;
 }
@@ -47,10 +47,9 @@ td {
 
 input {
   background-color: var(--base03);
-  caret-color: var(--base0);
   outline: none;
   border: none;
-  color: var(--base0);
+  color: var(--white);
   font-family: "Hack JBM Ligatured CCG";
   font-size: 18px;
   padding-left: 5px;
@@ -67,7 +66,7 @@ input {
   width: 100%;
   order: 4;
   overflow: hidden;
-  background: var(--black);
+  background: var(--base03);
   font-family: "Hack JBM Ligatured CCG";
   display: flex;
 }
@@ -99,7 +98,7 @@ td > a:active {
 }
 
 .unix-syntax2 {
-  color: var(--base0);
+  color: var(--white);
   order: 3;
 }
 
@@ -111,7 +110,7 @@ td > a:active {
 
 .cursor {
   animation: blinker 1s step-start infinite;
-  color: var(--base0);
+  color: var(--white);
   order: 4;
 }
 
@@ -134,29 +133,4 @@ td > a:active {
   bottom: 0;
   width: 100%;
   text-align: center;
-}
-
-#c0 {
-  color: var(--base03);
-}
-#c1 {
-  color: var(--red);
-}
-#c2 {
-  color: var(--green);
-}
-#c3 {
-  color: var(--yellow);
-}
-#c4 {
-  color: var(--blue);
-}
-#c5 {
-  color: var(--magenta);
-}
-#c6 {
-  color: var(--cyan);
-}
-#c7 {
-  color: var(--white);
 }
