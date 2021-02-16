@@ -1,5 +1,28 @@
+var date = new Date().getDate();
+var day,
+month,
+year = null;
+
 function displayDate() {
   now = new Date();
+  if (date != now.getDate() || day == null) {
+    refreshDate();
+  }
+
+  document.getElementById("clock").innerHTML =
+    day +
+    ", " +
+    month +
+    " " +
+    date +
+    ", " +
+    year +
+    " " +
+    displayClock() +
+    " HKT";
+}
+
+function refreshDate() {
   switch (now.getDay()) {
     case 0:
       day = "Sunday";
@@ -61,18 +84,8 @@ function displayDate() {
   }
   date = now.getDate();
   year = now.getFullYear();
-  document.getElementById("clock").innerHTML =
-    day +
-    ", " +
-    month +
-    " " +
-    date +
-    ", " +
-    year +
-    " " +
-    displayClock() +
-    " HKT";
 }
+
 function displayClock() {
   return (
     (now.getHours() < 10 ? "0" + now.getHours() : now.getHours()) +
