@@ -1,12 +1,38 @@
-var date = new Date().getDate();
-var now = new Date();
+let date = new Date().getDate();
 var day,
   month,
   year = null;
 
+let dayArray = new Array(7);
+dayArray[0] = "Sunday";
+dayArray[1] = "Monday";
+dayArray[2] = "Tuesday";
+dayArray[3] = "Wednesday";
+dayArray[4] = "Thursday";
+dayArray[5] = "Friday";
+dayArray[6] = "Saturday";
+
+let monthArray = new Array(12);
+monthArray[0] = "January";
+monthArray[1] = "February";
+monthArray[2] = "March";
+monthArray[3] = "April";
+monthArray[4] = "May";
+monthArray[5] = "June";
+monthArray[6] = "July";
+monthArray[7] = "August";
+monthArray[8] = "September";
+monthArray[9] = "October";
+monthArray[10] = "November";
+monthArray[11] = "December";
+
 function displayDate() {
+  now = new Date();
   if (date != now.getDate() || day == null) {
-    refreshDate();
+    day = dayArray[now.getDay()];
+    month = monthArray[now.getMonth()];
+    date = now.getDate();
+    year = now.getFullYear();
   }
   ReactDOM.render(
     day +
@@ -17,49 +43,13 @@ function displayDate() {
       ", " +
       year +
       " " +
-      displayClock() +
+      (now.getHours() < 10 ? "0" + now.getHours() : now.getHours()) +
+      ":" +
+      (now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes()) +
+      ":" +
+      (now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds())+
       " HKT",
     document.getElementById("clock")
-  );
-}
-
-function refreshDate() {
-  var dayArray = new Array(7);
-  dayArray[0] = "Sunday";
-  dayArray[1] = "Monday";
-  dayArray[2] = "Tuesday";
-  dayArray[3] = "Wednesday";
-  dayArray[4] = "Thursday";
-  dayArray[5] = "Friday";
-  dayArray[6] = "Saturday";
-  day = dayArray[now.getDay()];
-
-  var monthArray = new Array(12);
-  monthArray[0] = "January";
-  monthArray[1] = "February";
-  monthArray[2] = "March";
-  monthArray[3] = "April";
-  monthArray[4] = "May";
-  monthArray[5] = "June";
-  monthArray[6] = "July";
-  monthArray[7] = "August";
-  monthArray[8] = "September";
-  monthArray[9] = "October";
-  monthArray[10] = "November";
-  monthArray[11] = "December";
-  month = monthArray[now.getMonth()]
-
-  date = now.getDate();
-  year = now.getFullYear();
-}
-
-function displayClock() {
-  return (
-    (now.getHours() < 10 ? "0" + now.getHours() : now.getHours()) +
-    ":" +
-    (now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes()) +
-    ":" +
-    (now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds())
   );
 }
 
