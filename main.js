@@ -1,87 +1,54 @@
 var date = new Date().getDate();
+var now = new Date();
 var day,
-month,
-year = null;
+  month,
+  year = null;
 
 function displayDate() {
-  now = new Date();
   if (date != now.getDate() || day == null) {
     refreshDate();
   }
-
-  document.getElementById("clock").innerHTML =
+  ReactDOM.render(
     day +
-    ", " +
-    month +
-    " " +
-    date +
-    ", " +
-    year +
-    " " +
-    displayClock() +
-    " HKT";
+      ", " +
+      month +
+      " " +
+      date +
+      ", " +
+      year +
+      " " +
+      displayClock() +
+      " HKT",
+    document.getElementById("clock")
+  );
 }
 
 function refreshDate() {
-  switch (now.getDay()) {
-    case 0:
-      day = "Sunday";
-      break;
-    case 1:
-      day = "Monday";
-      break;
-    case 2:
-      day = "Tuesday";
-      break;
-    case 3:
-      day = "Wednesday";
-      break;
-    case 4:
-      day = "Thursday";
-      break;
-    case 5:
-      day = "Friday";
-      break;
-    case 6:
-      day = "Saturday";
-  }
-  switch (now.getMonth()) {
-    case 0:
-      month = "January";
-      break;
-    case 1:
-      month = "February";
-      break;
-    case 2:
-      month = "March";
-      break;
-    case 3:
-      month = "April";
-      break;
-    case 4:
-      month = "May";
-      break;
-    case 5:
-      month = "June";
-      break;
-    case 6:
-      month = "July";
-      break;
-    case 7:
-      month = "August";
-      break;
-    case 8:
-      month = "September";
-      break;
-    case 9:
-      month = "October";
-      break;
-    case 10:
-      month = "November";
-      break;
-    case 11:
-      month = "December";
-  }
+  var dayArray = new Array(7);
+  dayArray[0] = "Sunday";
+  dayArray[1] = "Monday";
+  dayArray[2] = "Tuesday";
+  dayArray[3] = "Wednesday";
+  dayArray[4] = "Thursday";
+  dayArray[5] = "Friday";
+  dayArray[6] = "Saturday";
+  day = dayArray[now.getDay()];
+
+  var monthArray = new Array(12);
+  monthArray[0] = "January";
+  monthArray[1] = "February";
+  monthArray[2] = "March";
+  monthArray[3] = "April";
+  monthArray[4] = "May";
+  monthArray[5] = "June";
+  monthArray[6] = "July";
+  monthArray[7] = "August";
+  monthArray[8] = "September";
+  monthArray[9] = "October";
+  monthArray[10] = "November";
+  monthArray[11] = "December";
+  month = monthArray[now.getMonth()]
+
   date = now.getDate();
   year = now.getFullYear();
 }
