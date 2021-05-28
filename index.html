@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -21,7 +21,7 @@
       <a class="unix-syntax2">&nbsp;➜</a>
       <a class="unix-syntax3">&nbsp; date &nbsp;</a>
     </div>
-    <a href="https://calendar.google.com/calendar/">
+    <a id="clock-url" href="https://calendar.google.com/calendar/">
       <div id="clock">
         <!--  displayDate() fills this element -->
       </div>
@@ -35,78 +35,8 @@
     <div class="d-sm-none">ls: cannot open directory '.': Permission denied</div>
     <div class="d-none d-sm-block">
       <div class="main">
-        <table>
-          <!--
-              <tr>
-                <th id="h">apps</th>
-                <td><a href="app://thunar">thunar</a></td>
-                <td><a href="app://kitty btm">bottom</a></td>
-                <td><a href="app://spotify %U">Spotify</a></td>
-                <td><a href="app://code-insiders">VSCode</a></td>
-              </tr>
-              
-              <tr>
-                <th id="h">games</th>
-                <td><a href="lutris:rungame/heroes-of-the-storm">HoTS</a></td>
-                <td><a href="lutris:rungame/overwatch">Overwatch</a></td>
-                <td><a href="steam://run/">Steam</a></td>
-              </tr>
-              -->
-          <tr>
-            <th id="h">
-              <a style="color: var(--blue)" href="https://www.reddit.com/"
-                >reddit</a
-              >
-            </th>
-            <td><a href="https://www.reddit.com/r/AyyMD/">AyyMD</a></td>
-            <td>
-              <a href="https://www.reddit.com/r/Competitiveoverwatch/">COW</a>
-            </td>
-            <td>
-              <a href="https://www.reddit.com/r/FirefoxCSS/">FirefoxCSS</a>
-            </td>
-            <td>
-              <a href="https://www.reddit.com/r/hearthstone">hearthstone</a>
-            </td>
-            <td>
-              <a href="https://www.reddit.com/r/MechanicalKeyboards/">mk</a>
-            </td>
-            <!--
-                <td>
-                  <a href="https://www.reddit.com/r/unixporn/">unixporn</a>
-                </td>
-                -->
-          </tr>
-          <tr>
-            <th id="h">social</th>
-            <td><a href="https://discordapp.com/app">Discord</a></td>
-            <td><a href="https://geekhack.org/index.php">geekhack</a></td>
-            <td><a href="https://twitter.com/">Twitter</a></td>
-            <td><a href="https://web.whatsapp.com/">WhatsApp</a></td>
-            <td>
-              <a href="https://www.zfrontier.com/app/entry">zFrontier</a>
-            </td>
-          </tr>
-          <tr>
-            <th id="h">work</th>
-            <td><a href="https://drive.google.com/drive/">Drive</a></td>
-            <td><a href="https://keep.google.com/">Keep</a></td>
-            <td><a href="https://www.ouhk.edu.hk/MyOUHK">MyOUHK</a></td>
-            <td><a href="https://www.office.com/">Office365</a></td>
-            <td><a href="https://ole.ouhk.edu.hk/">OLE</a></td>
-          </tr>
-          <tr>
-            <th id="h">ssh</th>
-            <td><a href="app://kitty ssh 0.0.0.0">desktop</a></td>
-            <td>
-              <a href="app://kitty ssh rex.ky.ng@code-server.ddns.net"
-                >gcloud</a
-              >
-            </td>
-            <td>
-              <a href="app://kitty ssh media-server.ddns.net">media</a>
-            </td>
-          </tr>
+        <table id="ls">
+          <!-- generated from config.xml -->
         </table>
       </div>
     </div>
