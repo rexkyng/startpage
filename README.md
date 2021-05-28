@@ -2,7 +2,7 @@
 
 Now uses a xml config file, requires selfhost to use it.
 
-Old version is under legacy branch and will not be maintained anymore.
+Old version is under the [legacy branch](https://gitlab.com/timescam/startpage/-/tree/legacy) and will not be maintained anymore.
 
 ## Screenshot
 
