@@ -92,17 +92,17 @@ td > a:active {
   order: 0;
 }
 
-.unix-user {
+.unix-user,.unix-user:hover {
   color: var(--cyan);
   order: 0;
 }
 
-.unix-syntax2 {
+.unix-syntax2,.unix-syntax2:hover {
   color: var(--white);
   order: 3;
 }
 
-.unix-syntax3 {
+.unix-syntax3,.unix-syntax3:hover {
   color: var(--green);
   order: 4;
 }
