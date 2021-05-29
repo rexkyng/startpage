@@ -39,6 +39,7 @@ function loadXMLDoc() {
 		}
 	};
 	xmlhttp.open("GET", "config.xml", true);
+	// xmlhttp.open("GET", "https://timescam.gitlab.io/startpage/config.xml", true);	// or you can host the xml only
 	xmlhttp.send();
 }
 
