@@ -1,6 +1,6 @@
 # Startpage
 
-Now uses a xml config file, requires selfhost to use it.
+Now uses a xml config file, requires [self hosting](eb2ab6760748dca848b3e07c46c4117afc2e7483) to use it.
 
 Old version is under the [legacy branch](https://gitlab.com/timescam/startpage/-/tree/legacy) and will not be maintained anymore.
 
