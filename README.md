@@ -14,36 +14,36 @@ Old version is under legacy branch and will not be maintained anymore.
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
 
-  <clock> <!-- do not change this -->
-    <timezone>HKT</timezone> <!--visual change only, can be leave blank -->
-    <url>https://calendar.google.com/calendar/</url> <!-- shortcut on the clock -->
-  </clock>
+	<clock> <!-- do not change this -->
+		<timezone>HKT</timezone> <!--visual change only, can be leave blank -->
+		<url>https://calendar.google.com/calendar/</url> <!-- shortcut on the clock -->
+	</clock>
 
-  <shortcuts> <!-- do not change this -->
-    <reddit> <!-- category name displayed as a folder in ls-->
-      <title>AyyMD</title> <!-- shortcut name displayed as a file in ls-->
-      <url>https://www.reddit.com/r/AyyMD/</url> <!-- url for shortcut -->
-    </reddit>
-    <reddit> <!-- add another block for another url in the same category -->
-      <title>COW</title>
-      <url>https://www.reddit.com/r/Competitiveoverwatch/</url>
-    </reddit>
+	<shortcuts> <!-- do not change this -->
+		<reddit> <!-- category name displayed as a folder in ls-->
+			<title>AyyMD</title> <!-- shortcut name displayed as a file in ls-->
+			<url>https://www.reddit.com/r/AyyMD/</url> <!-- url for shortcut -->
+		</reddit>
+		<reddit> <!-- add another block for another url in the same category -->
+			<title>COW</title>
+			<url>https://www.reddit.com/r/Competitiveoverwatch/</url>
+		</reddit>
 
-    <social> <!-- new category -->
-      <title>Discord</title>
-      <url>https://discordapp.com/app</url>
-    </social>
+		<social> <!-- new category -->
+			<title>Discord</title>
+			<url>https://discordapp.com/app</url>
+		</social>
 
-    <ssh>
-      <title>desktop</title>
-      <url>ssh://0.0.0.0</url> <!-- works with all kinds of url -->
-    </ssh>
+		<ssh>
+			<title>desktop</title>
+			<url>ssh://0.0.0.0</url> <!-- works with all kinds of url -->
+		</ssh>
 
-    <!-- add as many as u want -->
+		<!-- add as many as u want -->
 
-  </shortcuts>
+	</shortcuts>
 
-  <search>https://www.duckduckgoog.com/</search> <!-- search engine url -->
+	<search>https://www.duckduckgoog.com/</search> <!-- search engine url -->
 
 </config>
 ```

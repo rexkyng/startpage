@@ -1,136 +1,136 @@
 :root {
-  --black: var(--color0);
-  --base03: var(--background);
-  --red: var(--color1);
-  --green: var(--color2);
-  --yellow: var(--color3);
-  --blue: var(--color4);
-  --magenta: var(--color5);
-  --cyan: var(--color6);
-  --white: var(--foreground);
+	--black: var(--color0);
+	--base03: var(--background);
+	--red: var(--color1);
+	--green: var(--color2);
+	--yellow: var(--color3);
+	--blue: var(--color4);
+	--magenta: var(--color5);
+	--cyan: var(--color6);
+	--white: var(--foreground);
 }
 
 body,
 body * {
-  margin: unset;
-  box-sizing: unset;
-  padding: unset;
-  font-size: 18px;
-  color: var(--white);
-  text-decoration: unset;
+	margin: unset;
+	box-sizing: unset;
+	padding: unset;
+	font-size: 18px;
+	color: var(--white);
+	text-decoration: unset;
 }
 
 @media (max-width: 500px) {
-  .terminal-screen {
-    border: none !important;
-  }
-  #search {
-    order: 1 !important;
-  }
-  .user {
-    order: 0 !important;
-  }
+	.terminal-screen {
+		border: none !important;
+	}
+	#search {
+		order: 1 !important;
+	}
+	.user {
+		order: 0 !important;
+	}
 }
 
 /* elements */
 body {
-  background-color: var(--base03);
-  font-family: "Hack JBM Ligatured CCG";
-  color: var(--white);
-  font-size: 18px;
-  padding: 20px;
+	background-color: var(--base03);
+	font-family: "Hack JBM Ligatured CCG";
+	color: var(--white);
+	font-size: 18px;
+	padding: 20px;
 }
 
 td {
-  padding-left: 18px;
+	padding-left: 18px;
 }
 
 input {
-  background-color: var(--base03);
-  outline: none;
-  border: none;
-  color: var(--white);
-  font-family: "Hack JBM Ligatured CCG";
-  font-size: 18px;
-  padding-left: 5px;
+	background-color: var(--base03);
+	outline: none;
+	border: none;
+	color: var(--white);
+	font-family: "Hack JBM Ligatured CCG";
+	font-size: 18px;
+	padding-left: 5px;
 }
 
 #search {
-  display: flex;
-  width: 100%;
-  order: 2;
+	display: flex;
+	width: 100%;
+	order: 2;
 }
 
 #search-bar {
-  height: 20px;
-  width: 100%;
-  order: 4;
-  overflow: hidden;
-  background: var(--base03);
-  font-family: "Hack JBM Ligatured CCG";
-  display: flex;
+	height: 20px;
+	width: 100%;
+	order: 4;
+	overflow: hidden;
+	background: var(--base03);
+	font-family: "Hack JBM Ligatured CCG";
+	display: flex;
 }
 
 #textfield {
-  width: 100%;
+	width: 100%;
 }
 
 td > a:hover {
-  color: var(--cyan);
-  text-decoration: none;
+	color: var(--cyan);
+	text-decoration: none;
 }
 
 td > a:active {
-  color: var(--yellow);
-  text-decoration: none;
+	color: var(--yellow);
+	text-decoration: none;
 }
 
 /* "syntax highlighting" */
 
 .user {
-  display: flex;
-  order: 0;
+	display: flex;
+	order: 0;
 }
 
 .unix-user,.unix-user:hover {
-  color: var(--cyan);
-  order: 0;
+	color: var(--cyan);
+	order: 0;
 }
 
 .unix-syntax2,.unix-syntax2:hover {
-  color: var(--white);
-  order: 3;
+	color: var(--white);
+	order: 3;
 }
 
 .unix-syntax3,.unix-syntax3:hover {
-  color: var(--green);
-  order: 4;
+	color: var(--green);
+	order: 4;
 }
 /* blinking cursor */
 
 .cursor {
-  animation: blinker 1s step-start infinite;
-  color: var(--white);
-  order: 4;
+	animation: blinker 1s step-start infinite;
+	color: var(--white);
+	order: 4;
 }
 
 @keyframes blinker {
-  50% {
-    opacity: 0;
-  }
+	50% {
+		opacity: 0;
+	}
 }
 
 /* section headings */
 #h {
-  text-align: left;
-  color: var(--blue);
+	text-align: left;
+	color: var(--blue);
 }
 
 /* blocks */
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
 }
