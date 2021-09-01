@@ -58,8 +58,8 @@
 			<url>https://keep.google.com/</url>
 		</work>
 		<work>
-			<title>MyOUHK</title>
-			<url>https://www.ouhk.edu.hk/MyOUHK</url>
+			<title>MyHKMU</title>
+			<url>https://www.hkmu.edu.hk/MyHKMU</url>
 		</work>
 		<work>
 			<title>Office365</title>
@@ -67,7 +67,7 @@
 		</work>
 		<work>
 			<title>OLE</title>
-			<url>https://ole.ouhk.edu.hk/</url>
+			<url>https://ole.hkmu.edu.hk/</url>
 		</work>
 
 		<ssh>
