@@ -8,20 +8,12 @@
 
 	<shortcuts>
 		<reddit>
-			<title>AyyMD</title>
-			<url>https://www.reddit.com/r/AyyMD/</url>
-		</reddit>
-		<reddit>
 			<title>COW</title>
 			<url>https://www.reddit.com/r/Competitiveoverwatch/</url>
 		</reddit>
 		<reddit>
-			<title>FirefoxCSS</title>
-			<url>https://www.reddit.com/r/FirefoxCSS/</url>
-		</reddit>
-		<reddit>
-			<title>hearthstone</title>
-			<url>https://www.reddit.com/r/hearthstone</url>
+			<title>MouseReview</title>
+			<url>https://www.reddit.com/r/MouseReview/</url>
 		</reddit>
 		<reddit>
 			<title>mk</title>
@@ -33,10 +25,6 @@
 			<url>https://discordapp.com/app</url>
 		</social>
 		<social>
-			<title>geekhack</title>
-			<url>https://geekhack.org/index.php</url>
-		</social>
-		<social>
 			<title>Twitter</title>
 			<url>https://twitter.com/</url>
 		</social>
@@ -44,43 +32,31 @@
 			<title>WhatsApp</title>
 			<url>https://web.whatsapp.com/</url>
 		</social>
-		<social>
-			<title>zFrontier</title>
-			<url>https://www.zfrontier.com/app/entry</url>
-		</social>
 
 		<work>
 			<title>Drive</title>
-			<url>https://drive.google.com/drive/</url>
+			<url>https://drive.google.com/</url>
+		</work>
+		<work>
+			<title>Gmail</title>
+			<url>https://gmail.google.com/</url>
 		</work>
 		<work>
 			<title>Keep</title>
 			<url>https://keep.google.com/</url>
 		</work>
-		<work>
-			<title>MyHKMU</title>
-			<url>https://www.hkmu.edu.hk/MyHKMU</url>
-		</work>
-		<work>
-			<title>Office365</title>
-			<url>https://www.office.com/</url>
-		</work>
-		<work>
-			<title>OLE</title>
-			<url>https://ole.hkmu.edu.hk/</url>
-		</work>
 
 		<ssh>
 			<title>desktop</title>
-			<url>ssh://0.0.0.0</url>
+			<url>ssh://rex.ky.ng@home.com</url>
 		</ssh>
 		<ssh>
-			<title>gcloud</title>
-			<url>ssh://rex.ky.ng@code-server.ddns.net</url>
+			<title>nextcloud</title>
+			<url>ssh://rex.ky.ng@timescam.duckdns.org</url>
 		</ssh>
 		<ssh>
 			<title>media</title>
-			<url>ssh://media-server.ddns.net</url>
+			<url>ssh://rex.ky.ng@media-server.duckdns.org</url>
 		</ssh>
 	</shortcuts>
 
