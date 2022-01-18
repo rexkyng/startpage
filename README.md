@@ -47,3 +47,7 @@ Old version is under the [legacy branch](https://gitlab.com/timescam/startpage/-
 
 </config>
 ```
+
+## License
+
+[The Unlicense](LICENSE)
