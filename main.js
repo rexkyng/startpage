@@ -68,7 +68,7 @@ function loadJSON() {
 	};
 	customConfig.send(null);
 	console.log("Caching json config...");
-	loadConfig();
+	location.reload();
 }
 
 // clock
