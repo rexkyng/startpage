@@ -36,7 +36,7 @@ async function loadConfig() {
 	} catch (loadErr) {
 		console.log("Pervious config not cached (correctly)");
 		loadJSON();
-		await sleep(1);
+		await sleep(10);
 	} finally {
 		try {
 			clockConfig();
