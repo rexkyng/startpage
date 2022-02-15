@@ -8,6 +8,8 @@
 		<!-- soft link to ~/.cache/wal/colors.css for wal colors-->
 		<link rel="icon" type="image/png" href="favicon-32x32.png" />
 		<title>/home</title>
+		<script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+		<script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
 	</head>
 	<body>
 		<div class="newline">
@@ -31,6 +33,7 @@
 			<span class="path">shortcuts/</span>
 		</div>
 
+		<div class="newline">
 			<span id="ls">
 				<!-- generated from config.json -->
 			</span>
@@ -48,9 +51,6 @@
 				<input type="text" id="textfield" name="q" autofocus />
 			</form>
 		</div>
-		
-		<script src="https://unpkg.com/react/umd/react.production.min.js"></script>
-		<script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
 		<script src="main.js" defer></script>
 	</body>
 </html>
