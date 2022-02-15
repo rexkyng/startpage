@@ -30,12 +30,13 @@ let monthArray = [
 ];
 
 // init
-function loadConfig() {
+async function loadConfig() {
 	try {
 		loadCookie();
 	} catch (loadErr) {
 		console.log("Pervious config not cached (correctly)");
 		loadJSON();
+		await sleep(1);
 	} finally {
 		try {
 			clockConfig();
@@ -43,7 +44,7 @@ function loadConfig() {
 			searchConfig();
 		} catch (rendErr) {
 			document.getElementById("ls").outerHTML =
-				"<div class='newline'>ls: cannot open directory '.': Permission denied</div>";
+				"<div id='ls' class='newline'>ls: cannot open directory '.': Permission denied</div>";
 		}
 	}
 }
@@ -141,6 +142,11 @@ function groupingConfig() {
 // Search engine
 function searchConfig() {
 	document.getElementById("search-bar").action = config.search;
+}
+
+// sleep
+function sleep(ms) {
+	return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 // jobs
