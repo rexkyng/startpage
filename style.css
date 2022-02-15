@@ -8,6 +8,7 @@
 	--magenta: var(--color5);
 	--cyan: var(--color6);
 	--white: var(--foreground);
+	--fontList: "Hack JBM Ligatured CCG", "Hack", "DejaVu", monospace;
 }
 
 body,
@@ -15,34 +16,42 @@ body * {
 	margin: unset;
 	box-sizing: unset;
 	padding: unset;
-	font-size: 18px;
+	font-size: 16px;
 	color: var(--white);
+	font-family: var(--fontList);
 	text-decoration: unset;
 }
 
-@media (max-width: 500px) {
-	.terminal-screen {
-		border: none !important;
-	}
-	#search {
-		order: 1 !important;
-	}
-	.user {
-		order: 0 !important;
-	}
-}
-
-/* elements */
 body {
 	background-color: var(--base03);
-	font-family: "Hack JBM Ligatured CCG";
-	color: var(--white);
-	font-size: 18px;
-	padding: 20px;
+	padding: 24px;
 }
 
-td {
-	padding-left: 18px;
+.newline {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.username {
+	color: var(--blue)
+}
+
+.prompt,
+.path {
+	color: var(--magenta);
+}
+
+.return {
+	color: var(--green);
+}
+
+td, 
+th {
+	padding-right: 16px;
+}
+
+table {
+	border: none;
 }
 
 input {
@@ -50,24 +59,22 @@ input {
 	outline: none;
 	border: none;
 	color: var(--white);
-	font-family: "Hack JBM Ligatured CCG";
-	font-size: 18px;
+	font-family: var(--fontList);
+	font-size: 16px;
 	padding-left: 5px;
 }
 
 #search {
 	display: flex;
 	width: 100%;
-	order: 2;
 }
 
 #search-bar {
 	height: 20px;
 	width: 100%;
-	order: 4;
 	overflow: hidden;
 	background: var(--base03);
-	font-family: "Hack JBM Ligatured CCG";
+	font-family: var(--fontList);
 	display: flex;
 }
 
@@ -85,35 +92,11 @@ td > a:active {
 	text-decoration: none;
 }
 
-/* "syntax highlighting" */
-
-.user {
-	display: flex;
-	order: 0;
-}
-
-.unix-user,.unix-user:hover {
-	color: var(--cyan);
-	order: 0;
-}
-
-.unix-syntax2,.unix-syntax2:hover {
-	color: var(--white);
-	order: 3;
-}
-
-.unix-syntax3,.unix-syntax3:hover {
-	color: var(--green);
-	order: 4;
-}
 /* blinking cursor */
-
 .cursor {
 	animation: blinker 1s step-start infinite;
 	color: var(--white);
-	order: 4;
 }
-
 @keyframes blinker {
 	50% {
 		opacity: 0;
@@ -121,16 +104,7 @@ td > a:active {
 }
 
 /* section headings */
-#h {
+#folder {
 	text-align: left;
 	color: var(--blue);
-}
-
-/* blocks */
-.footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	text-align: center;
 }

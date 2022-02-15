@@ -1,6 +1,6 @@
 // variables
 var config;
-var timezone = "HKT"
+var timezone = "HKT";
 let date = new Date().getDate();
 var day,
 	month,
@@ -27,27 +27,54 @@ monthArray[9] = "October";
 monthArray[10] = "November";
 monthArray[11] = "December";
 
-// xml config
-function loadXMLDoc() {
-	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function () {
-		if (this.readyState == 4 && this.status == 200) {
-			config = this.responseXML;
-			clockConfig();
-			grouping();
-			searchEngine();
+// try: load config from cookie
+function loadConfig() {
+	var cookieValue;
+	try {
+		cookieValue = document.cookie
+			.split(";")
+			.find((row) => row.startsWith("cachedConfig="))
+			.split("=")[1];
+		console.log("Cached config found");
+		console.log("To generate a new config cache, delete cookie named `cachedConfig`");
+	} catch (err) {
+		console.log("Pervious config not cached, try to load from json config");
+		loadJSON();
+	}
+	try {
+		config = JSON.parse(cookieValue);
+		clockConfig();
+		groupingConfig();
+		searchConfig();
+	} catch (err) {
+		document.getElementById("ls").outerHTML =
+			"<div class='newline'>ls: cannot open directory '.': Permission denied</div>";
+	}
+}
+
+// fallback: load config from json
+function loadJSON() {
+	console.log("Loading json config...");
+	var customConfig = new XMLHttpRequest();
+	customConfig.overrideMimeType("application/json");
+	customConfig.open("GET", "config.json", true);
+	// xmlhttp.open("GET", "https://timescam.gitlab.io/startpage/config.json", true);	// or you can host the xml only
+	customConfig.onreadystatechange = function () {
+		if (customConfig.readyState === 4 && customConfig.status === 200) {
+			document.cookie =
+				"cachedConfig=" + this.responseText.replace(/[\t\n\r]/gm, "");
+			+"; SameSite=None; Secure";
 		}
 	};
-	xmlhttp.open("GET", "config.xml", true);
-	// xmlhttp.open("GET", "https://timescam.gitlab.io/startpage/config.xml", true);	// or you can host the xml only
-	xmlhttp.send();
+	customConfig.send(null);
+	console.log("Caching json config...");
+	loadConfig();
 }
 
 // clock
-function clockConfig(){
-	timezone = config.getElementsByTagName("timezone")[0].childNodes[0].nodeValue;
-	document.getElementById("clock-url").href = config.getElementsByTagName("clock")[0].getElementsByTagName("url")[0].childNodes[0].nodeValue;
-
+function clockConfig() {
+	timezone = config.clock.timezone;
+	document.getElementById("clock-url").href = config.clock.url;
 }
 function displayDate() {
 	now = new Date();
@@ -68,62 +95,59 @@ function displayDate() {
 			" " +
 			(now.getHours() < 10 ? "0" + now.getHours() : now.getHours()) +
 			":" +
-			(now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes()) +
+			(now.getMinutes() < 10
+				? "0" + now.getMinutes()
+				: now.getMinutes()) +
 			":" +
-			(now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds()) +
+			(now.getSeconds() < 10
+				? "0" + now.getSeconds()
+				: now.getSeconds()) +
 			" " +
 			timezone,
 		document.getElementById("clock")
 	);
-
-}
-
-// favicon
-function change_favicon(img) {
-	var favicon = document.querySelector('link[rel="shortcut icon"]');
-
-	if (!favicon) {
-		favicon = document.createElement("link");
-		favicon.setAttribute("rel", "shortcut icon");
-		var head = document.querySelector("head");
-		head.appendChild(favicon);
-	}
-
-	favicon.setAttribute("type", "image/png");
-	favicon.setAttribute("href", img);
 }
 
 // shortcuts
-function grouping() {
-	var x = config.getElementsByTagName("shortcuts")[0].childNodes;
-	var tags = [];
-	for (var i = 0; i < x.length; i++) {
-		if (x[i].nodeType != 3 && !tags.includes(x[i].nodeName)) {
-			display(x[i].nodeName);
-			tags.push(x[i].nodeName);
-		}
-	}
-}
-function display(Tag) {
-	var x = config.getElementsByTagName(Tag);
-	var content = "";
-	for (var i = 0; i < x.length; i++) {
-		content +=
-			'<td><a href="' +
-			x[i].getElementsByTagName("url")[0].childNodes[0].nodeValue +
-			'">' +
-			x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
-			"</a><td>";
-	}
-	document.getElementById("ls").innerHTML +=
-		'<tr><th id="h">' + Tag + "</th>" + content + "</tr>";
+function groupingConfig() {
+	var table = "<table>";
+	Object.keys(config.shortcuts).forEach(function(folder){
+		var content = "";
+		config.shortcuts[folder].forEach(
+			(element) =>
+				(content +=
+					'<td><a href="' +
+					element.url +
+					'">' +
+					element.title +
+					"</a></td>")
+		);
+		table +=
+			'<tr><th id="folder">' + folder + "</th>" + content + "</tr>";
+	})
+	table += "</table>";
+	document.getElementById("ls").innerHTML = table;
 }
 
 // Search engine
-function searchEngine(){
-	document.getElementById("search-bar").action = config.getElementsByTagName("search")[0].childNodes[0].nodeValue;
+function searchConfig() {
+	document.getElementById("search-bar").action = config.search;
 }
 
-loadXMLDoc();
+// jobs
+loadConfig();
 displayDate();
 setInterval(displayDate, 1000);
+
+// idk
+console.log(`
+████████╗██╗███╗░░░███╗███████╗░██████╗░█████╗░░█████╗░███╗░░░███╗░░░░
+╚══██╔══╝██║████╗░████║██╔════╝██╔════╝██╔══██╗██╔══██╗████╗░████║░░░░
+░░░██║░░░██║██╔████╔██║█████╗░░╚█████╗░██║░░╚═╝███████║██╔████╔██║░░░░
+░░░██║░░░██║██║╚██╔╝██║██╔══╝░░░╚═══██╗██║░░██╗██╔══██║██║╚██╔╝██║▀ █▀
+░░░██║░░░██║██║░╚═╝░██║███████╗██████╔╝╚█████╔╝██║░░██║██║░╚═╝░██║░ ▄█
+░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝╚══════╝╚═════╝░░╚════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝░░░░
+
+█▀ ▀█▀ ▄▀█ █▀█ ▀█▀ █▀█ ▄▀█ █▀▀ █▀▀
+▄█ ░█░ █▀█ █▀▄ ░█░ █▀▀ █▀█ █▄█ ██▄
+`);

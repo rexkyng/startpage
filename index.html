@@ -3,49 +3,42 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-			integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="colors.css" />
 		<!-- soft link to ~/.cache/wal/colors.css for wal colors-->
 		<link rel="icon" type="image/png" href="favicon-32x32.png" />
 		<title>/home</title>
 	</head>
 	<body>
-		<div class="user">
-			<a class="unix-user">&lambda;</a>
-			<a class="unix-syntax2">&nbsp;➜</a>
-			<a class="unix-syntax3">&nbsp; date &nbsp;</a>
+		<div class="newline">
+			<span class="username">&lambda;</span>
+			<span class="prompt">❯</span>
+			<a class="return">date</a>
 		</div>
-		<a id="clock-url" href="https://calendar.google.com/calendar/">
-			<div id="clock">
-				<!--  displayDate() fills this element -->
-			</div>
-		</a>
 
-		<div class="user">
-			<a class="unix-user">&lambda;</a>
-			<a class="unix-syntax2">&nbsp;➜</a>
-			<a class="unix-syntax3">&nbsp; ls &nbsp;</a>
+		<div class="newline">
+			<a id="clock-url" href="https://calendar.google.com/calendar/">
+				<div id="clock">
+					<!--  displayDate() fills this element -->
+				</div>
+			</a>
 		</div>
-		<div class="d-sm-none">
-			ls: cannot open directory '.': Permission denied
+
+		<div class="newline">
+			<span class="username">&lambda;</span>
+			<span class="prompt">❯</span>
+			<span class="return">ls</span>
+			<span class="path">shortcuts/</span>
 		</div>
-		<div class="d-none d-sm-block">
-			<div class="main">
-				<table id="ls">
-					<!-- generated from config.xml -->
-				</table>
-			</div>
+
+			<span id="ls">
+				<!-- generated from config.json -->
+			</span>
 		</div>
-		<br />
-		<div id="search">
-			<a class="unix-user">&lambda;</a>
-			<a class="unix-syntax2">&nbsp;➜ &nbsp;</a>
+
+		<div class="newline" id="search">
+			<span class="username">&lambda;&nbsp;</span>
+			<span class="prompt">❯&nbsp;</span>
 			<form
 				id="search-bar"
 				method="get"
@@ -55,38 +48,9 @@
 				<input type="text" id="textfield" name="q" autofocus />
 			</form>
 		</div>
-
-		<!-- color block
-		<div class="footer">
-			<table style="margin-left: auto; margin-right: auto">
-				<tr>
-					<th id="c0">█</th>
-					<th id="c1">█</th>
-					<th id="c2">█</th>
-					<th id="c3">█</th>
-					<th id="c4">█</th>
-					<th id="c5">█</th>
-					<th id="c6">█</th>
-					<th id="c7">█</th>
-					<td>startpage</td>
-				</tr>
-			</table>
-			<br />
-		</div>
-		-->
-		<script
-			crossorigin
-			src="https://unpkg.com/react@17/umd/react.production.min.js"
-		></script>
-		<script
-			crossorigin
-			src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
-		></script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-			crossorigin="anonymous"
-		></script>
+		
+		<script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+		<script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
 		<script src="main.js" defer></script>
 	</body>
 </html>
