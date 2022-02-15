@@ -1,51 +1,81 @@
 # Startpage
 
-Now uses a xml config file, requires [self hosting](eb2ab6760748dca848b3e07c46c4117afc2e7483) to use it.
-
-Old version is under the [legacy branch](https://gitlab.com/timescam/startpage/-/tree/legacy) and will not be maintained anymore.
+>Startpage with a shell like interface , use [config.json](./config.json) for user configurations.
 
 ## Screenshot
 
-![Screenshot](./screenshot.jpeg)
+![Screenshot](./screenshot.png)
 
-## How to use config.xml
+## Example of config.json
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<config>
+```json
+{
+	"clock": {
+		"timezone": "HKT",
+		"url": "https://calendar.google.com/calendar/"
+	},
 
-	<clock> <!-- do not change this -->
-		<timezone>HKT</timezone> <!--visual change only, can be leave blank -->
-		<url>https://calendar.google.com/calendar/</url> <!-- shortcut on the clock -->
-	</clock>
+	"shortcuts": {
+		"reddit": [
+			{
+				"title": "COW",
+				"url": "https://www.reddit.com/r/Competitiveoverwatch/"
+			},
+			{
+				"title": "MouseReview",
+				"url": "https://www.reddit.com/r/MouseReview/"
+			},
+			{
+				"title": "mk",
+				"url": "https://www.reddit.com/r/MechanicalKeyboards/"
+			}
+		],
+		"social": [
+			{
+				"title": "Discord",
+				"url": "https://discordapp.com/app"
+			},
+			{
+				"title": "Twitter",
+				"url": "https://twitter.com/"
+			},
+			{
+				"title": "WhatsApp",
+				"url": "https://web.whatsapp.com/"
+			}
+		],
+		"work": [
+			{
+				"title": "Drive",
+				"url": "https://drive.google.com/"
+			},
+			{
+				"title": "Gmail",
+				"url": "https://gmail.google.com/"
+			},
+			{
+				"title": "Keep",
+				"url": "https://keep.google.com/"
+			}
+		],
+		"ssh": [
+			{
+				"title": "desktop",
+				"url": "ssh://rex.ky.ng@home.com"
+			},
+			{
+				"title": "nextcloud",
+				"url": "ssh://rex.ky.ng@timescam.duckdns.org"
+			},
+			{
+				"title": "media",
+				"url": "ssh://rex.ky.ng@media-server.duckdns.org"
+			}
+		]
+	},
 
-	<shortcuts> <!-- do not change this -->
-		<reddit> <!-- category name displayed as a folder in ls-->
-			<title>AyyMD</title> <!-- shortcut name displayed as a file in ls-->
-			<url>https://www.reddit.com/r/AyyMD/</url> <!-- url for shortcut -->
-		</reddit>
-		<reddit> <!-- add another block for another url in the same category -->
-			<title>COW</title>
-			<url>https://www.reddit.com/r/Competitiveoverwatch/</url>
-		</reddit>
-
-		<social> <!-- new category -->
-			<title>Discord</title>
-			<url>https://discordapp.com/app</url>
-		</social>
-
-		<ssh>
-			<title>desktop</title>
-			<url>ssh://0.0.0.0</url> <!-- works with all kinds of url -->
-		</ssh>
-
-		<!-- add as many as u want -->
-
-	</shortcuts>
-
-	<search>https://www.duckduckgoog.com/</search> <!-- search engine url -->
-
-</config>
+	"search": "https://duckduckgoog.up.railway.app"
+}
 ```
 
 ## License
