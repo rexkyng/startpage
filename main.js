@@ -27,29 +27,37 @@ monthArray[9] = "October";
 monthArray[10] = "November";
 monthArray[11] = "December";
 
-// try: load config from cookie
+
+// init
 function loadConfig() {
-	var cookieValue;
 	try {
-		cookieValue = document.cookie
-			.split(";")
-			.find((row) => row.startsWith("cachedConfig="))
-			.split("=")[1];
-		console.log("Cached config found");
-		console.log("To generate a new config cache, delete cookie named `cachedConfig`");
-	} catch (err) {
-		console.log("Pervious config not cached, try to load from json config");
+		loadCookie();
+	} catch (loadErr) {
+		console.log("Pervious config not cached (correctly)");
 		loadJSON();
+	} finally {
+		try {
+			clockConfig();
+			groupingConfig();
+			searchConfig();
+		} catch (rendErr) {
+			document.getElementById("ls").outerHTML =
+				"<div class='newline'>ls: cannot open directory '.': Permission denied</div>";
+		}
 	}
-	try {
-		config = JSON.parse(cookieValue);
-		clockConfig();
-		groupingConfig();
-		searchConfig();
-	} catch (err) {
-		document.getElementById("ls").outerHTML =
-			"<div class='newline'>ls: cannot open directory '.': Permission denied</div>";
-	}
+}
+
+// try: load config from cookie
+function loadCookie() {
+	var cookieValue = document.cookie
+		.split(";")
+		.find((row) => row.startsWith("cachedConfig="))
+		.split("=")[1];
+	console.log("Cached config found");
+	console.log(
+		"To generate a new config cache, delete cookie named `cachedConfig`"
+	);
+	config = JSON.parse(cookieValue);
 }
 
 // fallback: load config from json
@@ -61,14 +69,15 @@ function loadJSON() {
 	// xmlhttp.open("GET", "https://timescam.gitlab.io/startpage/config.json", true);	// or you can host the xml only
 	customConfig.onreadystatechange = function () {
 		if (customConfig.readyState === 4 && customConfig.status === 200) {
+			var jsonObj = this.responseText;
+			config = JSON.parse(jsonObj);
 			document.cookie =
-				"cachedConfig=" + this.responseText.replace(/[\t\n\r]/gm, "");
+				"cachedConfig=" + jsonObj.replace(/[\t\n\r]/gm, "");
 			+"; SameSite=None; Secure";
+			console.log("json config cached");
 		}
 	};
 	customConfig.send(null);
-	console.log("Caching json config...");
-	window.location.replace(window.location.href);
 }
 
 // clock
@@ -111,7 +120,7 @@ function displayDate() {
 // shortcuts
 function groupingConfig() {
 	var table = "<table>";
-	Object.keys(config.shortcuts).forEach(function(folder){
+	Object.keys(config.shortcuts).forEach(function (folder) {
 		var content = "";
 		config.shortcuts[folder].forEach(
 			(element) =>
@@ -122,9 +131,8 @@ function groupingConfig() {
 					element.title +
 					"</a></td>")
 		);
-		table +=
-			'<tr><th id="folder">' + folder + "</th>" + content + "</tr>";
-	})
+		table += '<tr><th id="folder">' + folder + "</th>" + content + "</tr>";
+	});
 	table += "</table>";
 	document.getElementById("ls").innerHTML = table;
 }
