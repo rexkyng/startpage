@@ -1,32 +1,33 @@
 // variables
 var config;
-var timezone = "HKT";
+var timezone;
 let date = new Date().getDate();
 var day,
 	month,
 	year = null;
-let dayArray = new Array(7);
-dayArray[0] = "Sunday";
-dayArray[1] = "Monday";
-dayArray[2] = "Tuesday";
-dayArray[3] = "Wednesday";
-dayArray[4] = "Thursday";
-dayArray[5] = "Friday";
-dayArray[6] = "Saturday";
-let monthArray = new Array(12);
-monthArray[0] = "January";
-monthArray[1] = "February";
-monthArray[2] = "March";
-monthArray[3] = "April";
-monthArray[4] = "May";
-monthArray[5] = "June";
-monthArray[6] = "July";
-monthArray[7] = "August";
-monthArray[8] = "September";
-monthArray[9] = "October";
-monthArray[10] = "November";
-monthArray[11] = "December";
-
+let dayArray = [
+	"Sunday",
+	"Monday",
+	"Tuesday",
+	"Wednesday",
+	"Thursday",
+	"Friday",
+	"Saturday",
+];
+let monthArray = [
+	"January",
+	"February",
+	"March",
+	"April",
+	"May",
+	"June",
+	"July",
+	"August",
+	"September",
+	"October",
+	"November",
+	"December",
+];
 
 // init
 function loadConfig() {
