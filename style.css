@@ -8,7 +8,7 @@
 	--magenta: var(--color5);
 	--cyan: var(--color6);
 	--white: var(--foreground);
-	--fontList: "Hack JBM Ligatured CCG", "Hack", "DejaVu", monospace;
+	--fontList: "Hack JBM Ligatured", "Sarasa Term CL", monospace;
 }
 
 body,
