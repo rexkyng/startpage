@@ -30,36 +30,36 @@ let monthArray = [
 ];
 
 // init
-async function loadConfig() {
-	try {
-		loadCookie();
-	} catch (loadErr) {
+function loadConfig() {
+	if (localStorage.getItem("cachedConfig")) {
+		loadLocalStorage();
+	} else {
 		console.log("Pervious config not cached (correctly)");
 		loadJSON();
-		await sleep(1000);
-	} finally {
-		try {
-			clockConfig();
-			groupingConfig();
-			searchConfig();
-		} catch (rendErr) {
-			document.getElementById("ls").outerHTML =
-				"<div id='ls' class='newline'>ls: cannot open directory '.': Permission denied</div>";
-		}
 	}
 }
 
-// try: load config from cookie
-function loadCookie() {
-	var cookieValue = document.cookie
-		.split(";")
-		.find((row) => row.startsWith("cachedConfig="))
-		.split("=")[1];
+function pageRender() {
+	try {
+		clockConfig();
+		groupingConfig();
+		searchConfig();
+	} catch (rendErr) {
+		document.getElementById("ls").outerHTML =
+			"<div id='ls' class='newline'>ls: cannot open directory '.': Permission denied</div>";
+	}
+}
+
+// try: load config from localStorage
+function loadLocalStorage() {
+	var cachedConfig = localStorage.getItem("cachedConfig");
 	console.log("Cached config found");
 	console.log(
-		"To generate a new config cache, delete cookie named `cachedConfig`"
+		"To generate a new config cache, delete localStorage named `cachedConfig`"
 	);
-	config = JSON.parse(cookieValue);
+	config = JSON.parse(cachedConfig);
+	console.log(cachedConfig);
+	pageRender();
 }
 
 // fallback: load config from json
@@ -73,10 +73,12 @@ function loadJSON() {
 		if (customConfig.readyState === 4 && customConfig.status === 200) {
 			var jsonObj = this.responseText;
 			config = JSON.parse(jsonObj);
-			document.cookie =
-				"cachedConfig=" + jsonObj.replace(/[\t\n\r]/gm, "");
-			+"; SameSite=None; Secure";
+			localStorage.setItem(
+				"cachedConfig",
+				jsonObj.replace(/[\t\n\r]/gm, "")
+			);
 			console.log("json config cached");
+			pageRender();
 		}
 	};
 	customConfig.send(null);
