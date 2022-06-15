@@ -6,27 +6,27 @@ var day,
 	month,
 	year = null;
 let dayArray = [
-	"Sunday",
-	"Monday",
-	"Tuesday",
-	"Wednesday",
-	"Thursday",
-	"Friday",
-	"Saturday",
+	"Sun",
+	"Mon",
+	"Tue",
+	"Wed",
+	"Thu",
+	"Fri",
+	"Sat",
 ];
 let monthArray = [
-	"January",
-	"February",
-	"March",
-	"April",
+	"Jan",
+	"Feb",
+	"Mar",
+	"Apr",
 	"May",
-	"June",
-	"July",
-	"August",
-	"September",
-	"October",
-	"November",
-	"December",
+	"Jun",
+	"Jul",
+	"Aug",
+	"Sep",
+	"Oct",
+	"Nov",
+	"Dec",
 ];
 
 // init
@@ -99,12 +99,10 @@ function displayDate() {
 	}
 	ReactDOM.render(
 		day +
-			", " +
+			" " +
 			month +
 			" " +
 			date +
-			", " +
-			year +
 			" " +
 			(now.getHours() < 10 ? "0" + now.getHours() : now.getHours()) +
 			":" +
@@ -116,7 +114,9 @@ function displayDate() {
 				? "0" + now.getSeconds()
 				: now.getSeconds()) +
 			" " +
-			timezone,
+			timezone +
+			" " +
+			year,
 		document.getElementById("clock")
 	);
 }
