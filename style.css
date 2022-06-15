@@ -36,11 +36,11 @@ body {
 	color: var(--blue)
 }
 
-.prompt,
 .path {
 	color: var(--magenta);
 }
 
+.prompt,
 .return {
 	color: var(--green);
 }
