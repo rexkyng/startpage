@@ -1,56 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="colors.css" />
-		<!-- soft link to ~/.cache/wal/colors.css for wal colors-->
-		<link rel="icon" type="image/png" href="favicon-32x32.png" />
-		<title>/home</title>
-		<script src="https://unpkg.com/react/umd/react.production.min.js"></script>
-		<script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+		<title>redirecting</title>
+		<script>
+			location.replace("https://startpage-t.vercel.app/");
+		</script>
 	</head>
-	<body>
-		<div class="newline">
-			<span class="username">&lambda;</span>
-			<span class="prompt">❯</span>
-			<a class="return">date</a>
-		</div>
-
-		<div class="newline">
-			<a id="clock-url" href="https://calendar.google.com/calendar/">
-				<div id="clock">
-					<!--  displayDate() fills this element -->
-				</div>
-			</a>
-		</div>
-
-		<div class="newline">
-			<span class="username">&lambda;</span>
-			<span class="prompt">❯</span>
-			<span class="return">ls</span>
-			<span class="path">shortcuts/</span>
-		</div>
-
-		<div class="newline">
-			<span id="ls">
-				<!-- generated from config.json -->
-			</span>
-		</div>
-
-		<div class="newline" id="search">
-			<span class="username">&lambda;&nbsp;</span>
-			<span class="prompt">❯&nbsp;</span>
-			<form
-				id="search-bar"
-				method="get"
-				action="https://search.brave.com/search"
-				autocomplete="off"
-			>
-				<input type="text" id="textfield" name="q" autofocus />
-			</form>
-		</div>
-		<script src="main.js" defer></script>
-	</body>
+	<body></body>
 </html>

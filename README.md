@@ -1,6 +1,8 @@
 # Startpage
 
->Startpage with a shell like interface , use [config.json](./config.json) for user configurations.
+>Startpage with a shell like interface , use [data.json](./src/data.json) for user configurations.
+
+Built with [astro](https://astro.build/)
 
 ## Screenshot
 
@@ -11,7 +13,6 @@
 ```json
 {
 	"clock": {
-		"timezone": "HKT",
 		"url": "https://calendar.google.com/calendar/"
 	},
 
@@ -74,7 +75,7 @@
 		]
 	},
 
-	"search": "https://duckduckgoog.up.railway.app"
+	"search": "https://search.brave.com/search"
 }
 ```
 

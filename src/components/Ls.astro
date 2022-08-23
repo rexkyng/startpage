@@ -1,0 +1,29 @@
+---
+export interface Props {
+	entries: JSON;
+}
+const { entries } = Astro.props;
+// console.log(entries);
+function tableContent() {
+	var tableContent = "<table>";
+	Object.keys(entries).forEach(function (folder) {
+		var content = "";
+		entries[folder].forEach(
+			(element) =>
+				(content +=
+					'<td><a href="' +
+					element.url +
+					'">' +
+					element.title +
+					"</a></td>")
+		);
+		tableContent +=
+			'<tr><th id="folder">' + folder + "</th>" + content + "</tr>";
+	});
+	return tableContent + "</table>";
+}
+---
+
+<div class="newline">
+	<span id="ls" set:html={tableContent()}> </span>
+</div>
