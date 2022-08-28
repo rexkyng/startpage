@@ -48,7 +48,7 @@ export default class Clock extends React.Component {
 			.match(/\(([^\)]+)\)$/)[1]
 			.match(/\b(\w)/g)
 			.join("");
-		if (timezone == "HKST") timezone = "HKT";
+		if (timezone == "HKST" || timezone == "CST") timezone = "HKT";
 		const year = time.getFullYear();
 		return (
 			<div className="newline">
