@@ -8,7 +8,6 @@
 	--magenta: var(--color5);
 	--cyan: var(--color6);
 	--white: var(--foreground);
-	--fontList: "JetBrains Mono", "Sarasa Term CL", monospace;
 }
 
 body,
@@ -18,7 +17,7 @@ body * {
 	padding: unset;
 	font-size: 16px;
 	color: var(--white);
-	font-family: var(--fontList);
+	font-family: "JetBrains Mono", "Sarasa Term CL", monospace;
 	text-decoration: unset;
 }
 
