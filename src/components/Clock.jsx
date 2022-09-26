@@ -15,6 +15,7 @@ const monthArray = [
 	"Nov",
 	"Dec",
 ];
+var timezone = false;
 
 export default class Clock extends React.Component {
 	constructor(props) {
@@ -43,12 +44,15 @@ export default class Clock extends React.Component {
 		const hour = time.getHours();
 		const minute = time.getMinutes();
 		const second = time.getSeconds();
-		let timezone = time
-			.toString()
-			.match(/\(([^\)]+)\)$/)[1]
-			.match(/\b(\w)/g)
-			.join("");
-		if (timezone == "HKST" || timezone == "CST") timezone = "HKT";
+		if (timezone) timezone; 
+		else {
+			timezone = time
+				.toString()
+				.match(/\(([^\)]+)\)$/)[1]
+				.match(/\b(\w)/g)
+				.join("");
+			if (timezone == "HKST" || timezone == "CST") timezone = "HKT";
+		}
 		const year = time.getFullYear();
 		return (
 			<div className="newline">
