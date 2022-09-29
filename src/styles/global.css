@@ -35,11 +35,15 @@ body {
 	color: var(--blue)
 }
 
-.path {
+.prompt {
+	color: var(--magenta);
+	font-family: "JetBrains Mono" !important;
+}
+
+.path{
 	color: var(--magenta);
 }
 
-.prompt,
 .return {
 	color: var(--green);
 }
