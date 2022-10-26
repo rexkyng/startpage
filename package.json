@@ -10,15 +10,15 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/react": "^1.0.0",
-    "@astrojs/vercel": "^1.0.1",
-    "astro": "^1.0.6",
-    "astro-compress": "^1.0.3",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "@astrojs/react": "^1.2.1",
+    "@astrojs/vercel": "^2.3.1",
+    "astro": "^1.5.2",
+    "astro-compress": "^1.0.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@astrojs/prefetch": "^0.0.7",
-    "@fontsource/jetbrains-mono": "^4.5.10"
+    "@astrojs/prefetch": "^0.1.0",
+    "@fontsource/jetbrains-mono": "^4.5.11"
   }
 }
