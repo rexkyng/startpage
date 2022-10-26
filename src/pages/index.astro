@@ -11,7 +11,7 @@ import json from "../data.json";
 
 <Layout title="/home">
 	<Prompt cmd="date" params="" />
-	<Clock client:only={"react"} href={json.clock.url} />
+	<Clock client:load href={json.clock.url} />
 	<Prompt cmd="ls" params="shortcuts/" />
 	<Ls entries={json.shortcuts} />
 	<Search engine={json.search} />
