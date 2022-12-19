@@ -8,7 +8,7 @@ const { engine } = Astro.props;
 <div class="newline" id="search">
 	<span class="username">&lambda;&nbsp;</span>
 	<span class="prompt">❯&nbsp;</span>
-	<form id="search-bar" method="get" action={engine} autocomplete="off" target="_blank">
+	<form id="search-bar" method="get" action={engine} autocomplete="off" target="_blank" onsubmit="this.submit(); this.reset(); return false;">
 		<input type="text" id="textfield" name="q" autofocus />
 	</form>
 </div>
