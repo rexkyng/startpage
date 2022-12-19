@@ -1,6 +1,6 @@
 ---
 export interface Props {
-	engine: String;
+	engine: string;
 }
 const { engine } = Astro.props;
 ---
@@ -8,7 +8,7 @@ const { engine } = Astro.props;
 <div class="newline" id="search">
 	<span class="username">&lambda;&nbsp;</span>
 	<span class="prompt">❯&nbsp;</span>
-	<form id="search-bar" method="get" action={engine} autocomplete="off">
+	<form id="search-bar" method="get" action={engine} autocomplete="off" target="_blank">
 		<input type="text" id="textfield" name="q" autofocus />
 	</form>
 </div>
