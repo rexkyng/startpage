@@ -56,7 +56,7 @@ export default class Clock extends React.Component {
 		const year = time.getFullYear();
 		return (
 			<div className="newline">
-				<a id="clock-url" href={this.props.href}>
+				<a id="clock-url" href={this.props.href} target="_blank" rel="noopener noreferrer">
 					{weekDay} {month} {date} {hour}:
 					{minute < 10 ? "0" + minute : minute}:
 					{second < 10 ? "0" + second : second} {timezone} {year}
